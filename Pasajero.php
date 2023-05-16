@@ -93,8 +93,8 @@ class Pasajero{
  * @return Int
  */
 public function darPorcentajeIncremento(){
-    $porcentaje = 10;
-    return $porcentaje;
+    $porcIncremento = 10;
+    return $porcIncremento;
 }
 
 }
