@@ -84,5 +84,18 @@ class Pasajero{
         return $cadena;
     }
 
+    
+// Agrego la funcion darPorcentajeIncremento que pide el TP3
+
+/**
+ * Implementar el método darPorcentajeIncremento() que retorne el porcentaje que debe aplicarse como incremento según las características del pasajero. 
+ * Para un pasajero comun siempre es 10
+ * @return Int
+ */
+public function darPorcentajeIncremento(){
+    $porcentaje = 10;
+    return $porcentaje;
+}
+
 }
 ?>
