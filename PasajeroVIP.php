@@ -49,6 +49,11 @@ class PasajeroVIP extends Pasajero{
      * supera a las 300 millas se realiza un incremento del 30%. 
      */
     public function darPorcentajeIncremento(){
+        $porcIncremento = 35;
+        if ($this->getCantMillas() > 300) {
+            $porcIncremento = 30;
+        }
+        return $porcIncremento;
         
     }
     
