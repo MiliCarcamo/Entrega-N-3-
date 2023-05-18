@@ -152,7 +152,7 @@ class Viaje{
             $this->setArrayPasajeros($arregloPasajeros);
             $costo = $this->getCostoViaje();
             $incremento = $objPasajero->darPorcentajeIncremento();
-            $costoTotal = $costo + ($incremento/100);
+            $costoTotal = $costo + (($incremento/100)*$costo) + $this->getSumaCostosAbonados();
             $this->setSumaCostosAbonados($costoTotal); 
         }
         return $costoTotal;
