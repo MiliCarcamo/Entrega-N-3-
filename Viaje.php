@@ -12,14 +12,13 @@ class Viaje{
     private $sumaCostosAbonados;
 
     //Metodo constructor
-    public function __construct($codigoViaje, $destino, $cantMaxPasajeros, $arrayPasajeros, $objResponsableV, $costoViaje, $sumaCostosAbonados){
+    public function __construct($codigoViaje, $destino, $cantMaxPasajeros, $arrayPasajeros, $objResponsableV, $costoViaje){
         $this->codigoViaje = $codigoViaje;
         $this->destino = $destino;
         $this->cantMaxPasajeros = $cantMaxPasajeros;
         $this->arrayPasajeros = $arrayPasajeros ;
         $this->objResponsableV = $objResponsableV;
         $this->costoViaje = $costoViaje;
-        $this->sumaCostosAbonados = $sumaCostosAbonados;
     }
 
     //Metodos Get
@@ -180,15 +179,13 @@ class Viaje{
         $codigo = $this->getCodigoViaje();
         $capacidadViaje = $this->getCantMaxPasajeros();
         $totalPasajeros = $this->getArrayPasajeros();
-        $responsable = $this->getObjResponsableViaje();
+        $responsable = $this->getResponsableV();
         $cadena = "El codigo de viaje es: " . $codigo . "\n".
         "El destino es del viaje es: " . $viaje . "\n" . 
         "La capacidad maxima de pasajeros es: " . $capacidadViaje . "\n" .
         "La cantidad de pasajeros a bordo es: " . count($totalPasajeros) . "\n" . 
-        "El responsable del viaje es: " . $responsable . "\n
-        El costo del viaje es: ". $this->getCostoViaje(). "\n
-        La suma de los costos abonados por los pasajeros es: ". $this->getSumaCostosAbonados();
-        
+        "El responsable del viaje es: " . $responsable . "
+        El costo del viaje es: ". $this->getCostoViaje() . "\n";
         return $cadena;
     }
 

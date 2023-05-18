@@ -55,10 +55,10 @@ class ResponsableV{
     public function __toString()
     {
         $cadena = '';
-        $cadena = "Numero de empleado: ". $this->getNroEmpleado().
+        $cadena = "\n Numero de empleado: ". $this->getNroEmpleado().
         "\n Numero de Licencia: ". $this->getNroLicencia().
         "\n Nombre: ". $this->getNombre().
-        "\n Apellido: ". $this->getApellido(). "\n ";
+        "\n Apellido: ". $this->getApellido();
         return $cadena;
     }
 
